@@ -1,0 +1,22 @@
+.cancel{
+    width: 37px;
+    
+    height: 37px;
+    border-radius: 15px !important;
+    background-color: #F4BB4A !important;
+    /* z-index: 10; */
+    display: flex;
+    align-items: center;
+    border-style: none;
+    justify-content: center;
+    cursor: pointer;
+    
+    }
+    
+    .icon{
+        color: #FFFFFF;
+        text-align: center;
+        box-shadow: 0px 4px 4px 0px #00000040;
+
+    }
+    

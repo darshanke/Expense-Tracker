@@ -1,0 +1,16 @@
+.SectionTwo{
+    margin : 32px 32px 32px 32px;
+    display: grid;
+    grid-template-columns: 63% 32%;
+    gap: 5%;
+}
+
+
+@media screen and (max-width: 754px) {
+    .SectionTwo{
+        margin : 32px 32px 32px 32px;
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 3%;
+    }
+}
