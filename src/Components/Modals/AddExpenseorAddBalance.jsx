@@ -3,6 +3,7 @@ import ReactModal from "react-modal";
 import styles from "./AddExpenseorAddBalance.module.css";
 import Button from "../Buttons/Button";
 import { SnackbarProvider, useSnackbar } from "notistack";
+import { ZAxis } from "recharts";
 
 ReactModal.setAppElement("#root");
 
@@ -134,6 +135,7 @@ const AddExpenseorAddBalance = ({
       shouldCloseOnEsc={true}
       className={styles.modal}
       overlayClassName={styles.overlay}
+      styles={{  zIndex: 67 }}
     >
       {!addBalance ? (
         <div>
