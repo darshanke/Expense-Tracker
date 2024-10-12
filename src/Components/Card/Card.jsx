@@ -14,7 +14,7 @@ const Card = ({
   expenseList,
   setExpenseList,
 }) => {
-  useEffect(() => {}, [amount]);
+ 
   return (
     <div className={`${styles.card}`}>
       <div className={`${styles.heading}`}>

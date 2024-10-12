@@ -16,7 +16,7 @@ const SectionOne = ({expenseList,setExpenseList , amount , setAmount , expenseAm
       setExpenseAmount(Number(getExpense ));
     }
 
-  }, []);
+  }, [amount, expenseAmount]);
 
   return (
     <div className={`${style.Sectionone}`}>
