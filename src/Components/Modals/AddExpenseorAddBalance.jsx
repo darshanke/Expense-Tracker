@@ -135,7 +135,7 @@ const AddExpenseorAddBalance = ({
       shouldCloseOnEsc={true}
       className={styles.modal}
       overlayClassName={styles.overlay}
-      styles={{  zIndex: 67 }}
+      // styles={{  zIndex: 67 }}
     >
       {!addBalance ? (
         <div>

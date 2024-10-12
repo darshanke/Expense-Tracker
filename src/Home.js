@@ -25,6 +25,7 @@ const Home = () => {
         setAmount={setAmount}
         expenseAmount={expenseAmount}
         setExpenseAmount={setExpenseAmount}
+        style={{zIndex: '9'}}
         />
         <SectionTwo 
         expenseList={expenseList}
