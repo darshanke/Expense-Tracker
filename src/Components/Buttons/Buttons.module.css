@@ -2,7 +2,7 @@
   width: 167.65px;
   height: 38px;
   border-radius: 15px !important;
-  opacity: 0px;
+  opacity: 1px;
   color: #FFFFFF;
   border-style: none;
 }
@@ -30,7 +30,7 @@ border-radius: 15px !important;
   width: 37px;
 height: 37px;
 gap: 0px;
-opacity: 0px;
+opacity: 1;
 
 }
 

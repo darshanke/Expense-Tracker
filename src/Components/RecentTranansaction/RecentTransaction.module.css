@@ -86,9 +86,9 @@ tr {
 
   align-items: center;
   text-align: center;
-  gap: 0px;
+
   border-radius: 15px !important;
-  opacity: 0px;
+  opacity: 1;
   background: linear-gradient(0deg, #f1f1f1, #f1f1f1),
     linear-gradient(0deg, #f1f1f1, #f1f1f1),
     linear-gradient(0deg, #f1f1f1, #f1f1f1),
