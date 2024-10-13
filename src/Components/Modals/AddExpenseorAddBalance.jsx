@@ -21,7 +21,7 @@ const AddExpenseorAddBalance = ({
   editTrans,
   indexofItem
 }) => {
-  console.log(item,indexofItem, expenseList); // {
+  // console.log(item,indexofItem, expenseList); // {
   //     "title": "10001",
   //     "price": 1000,
   //     "catagory": "Entertainment",
@@ -38,7 +38,7 @@ const AddExpenseorAddBalance = ({
   const haneleAddBalance = (e) => {
     e.preventDefault();
     const amount = parseInt(addAmount);
-    console.log(amount, income);
+    // console.log(amount, income);
     if (amount <= 0) {
       enqueueSnackbar("Enter  valid Amount to add to Wallet", {
         variant: "warning",
@@ -56,10 +56,10 @@ const AddExpenseorAddBalance = ({
   };
 
   const addExpense = (e) => {
-    debugger;
+   
     e.preventDefault();
     const price = Number(expense);
-    console.log(price);
+    // console.log(price);
     if (price <= 0) {
       enqueueSnackbar("Add valid price to Add Expense", { variant: "warning" });
       onRequestClose();
@@ -84,14 +84,34 @@ const AddExpenseorAddBalance = ({
       catagory: catagory,
       createdDate: date,
     };
-
+    let updatedExpenses;
     if(editTrans){
       setExpenseList((prevExpenses) => {
-        const updatedExpenses = [...prevExpenses];
+        updatedExpenses = [...prevExpenses];
         updatedExpenses[indexofItem] = newData; 
         localStorage.setItem("expenseList", JSON.stringify(updatedExpenses));
         return updatedExpenses;
       });
+      // console.log(updatedExpenses);
+
+   let value = updatedExpenses.reduce((acc,item)=> acc+=item.price,0 )
+    // console.log(value);
+
+      setIncome((prev) => 5000-Number(value));
+      const balance = 5000-Number(value);
+      localStorage.setItem("balance", balance);
+      setAmount(balance);
+  
+      localStorage.setItem("expense", value);
+      setExpenseAmount(value);
+      
+    setTitle("");
+    setExpense("");
+    setDate("");
+    setCatagory("");
+    onRequestClose();
+    // console.log(amount,expenseAmount);
+    return;
     }
     else{
       setExpenseList((prevExpenses) => {
@@ -101,7 +121,7 @@ const AddExpenseorAddBalance = ({
       });
     }
    
-
+      
     setIncome((prev) => parseInt(prev) - price);
     const balance = parseInt(localStorage.getItem("balance")) - price;
     localStorage.setItem("balance", balance);
@@ -120,12 +140,16 @@ const AddExpenseorAddBalance = ({
   };
 
   useEffect(() => {
-    console.log('edite')
+    // console.log('edite')
     setTitle(editTrans && item ? item.title : "");
     setExpense(editTrans && item ? item.price : "");
     setCatagory(editTrans && item ? item.catagory : "");
     setDate(editTrans && item ? item.createdDate : "");
   }, [item]);
+
+  useEffect(()=>{
+    // console.log("amount changed");
+  },[amount,expenseAmount,expenseList ]);
 
   return (
     <ReactModal

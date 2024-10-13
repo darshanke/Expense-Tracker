@@ -16,7 +16,7 @@ const Button = ({
  editTrans,
  indexofItem
 }) => {
-  console.log(item,indexofItem,expenseList);
+  // console.log(item,indexofItem,expenseList);
   const [show, setShow] = useState(false);
   const handleModalToggle = () => {
     setShow((prevShow) => !prevShow);

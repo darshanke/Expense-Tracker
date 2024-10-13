@@ -17,6 +17,10 @@ const Home = () => {
     return savedExpenses ? JSON.parse(savedExpenses) : [];
     })
   },[])
+  useEffect(()=>{
+    // console.log(amount,expenseAmount)
+  },[amount,expenseAmount])
+
   return (
     <div>
         <SectionOne expenseList={expenseList}
