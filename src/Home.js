@@ -3,9 +3,9 @@ import SectionOne from './SectionOne'
 import SectionTwo from './SectionTwo'
 
 const Home = () => {
-  const [amount, setAmount] = useState(localStorage.getItem("balance"));
+  const [amount, setAmount] = useState(localStorage.getItem("balance")||5000);
   const [expenseAmount, setExpenseAmount] = useState(
-    localStorage.getItem("expense")
+    localStorage.getItem("expense")||0
   );
   const [expenseList, setExpenseList] = useState(() => {
     const savedExpenses = localStorage.getItem("expenseList") || null;
